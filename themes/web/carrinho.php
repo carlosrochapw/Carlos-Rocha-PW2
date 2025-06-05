@@ -16,7 +16,7 @@ $cart = $_SESSION['cart'] ?? [];
       <p>Seu carrinho está vazio.</p>
     <?php else: ?>
       <div class="cart-conteudo">
-        <!-- Lista de itens -->
+     
         <div class="cart-items">
           <table>
             <thead>
@@ -54,7 +54,7 @@ $cart = $_SESSION['cart'] ?? [];
           </table>
         </div>
 
-        <!-- Resumo da compra -->
+   
         <aside class="cart-summary">
           <h2>Resumo da Compra</h2>
           <div class="informacoes">
@@ -77,7 +77,7 @@ $cart = $_SESSION['cart'] ?? [];
 </main>
 
 <script>
-  // Toast estilizado IndieHub
+ 
   function indieToast(msg) {
     const toast = document.createElement('div');
     toast.innerText = msg;
