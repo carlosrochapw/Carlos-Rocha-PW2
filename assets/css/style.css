@@ -1,0 +1,1414 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/* --- Stardew Valley Palette --- */
+:root {
+  --sv-sky-blue: #a3c9e2;
+  --sv-sky-blue2: #cbe7f6;
+  --sv-grass-green: #a7d89c;
+  --sv-grass-green2: #d6eec5;
+  --sv-brown: #bfa77a;
+  --sv-brown-dark: #8a7b5c;
+  --sv-title-yellow: #ffe9a3;
+  --sv-title-orange: #ffb347;
+  --sv-beige: #f8fbe8;
+  --sv-earth: #e3cfa6;
+  --sv-shadow: #bfa77a;
+  --sv-black: #2d1c0a;
+}
+
+/* === Variáveis de cor === */
+:root {
+  --verde-escuro: #7ae5be;
+  --verde-medio: #1c557b;
+  --verde-claro: #1b6a91;
+  --verde-muito-claro: #2479b5;
+  --verde-hover: #000000;
+  --verde-sujo-claro: #b1f7b1; /* fundo suave sem branco */
+  --texto-claro: #ffffff;
+  --texto-hover: #b8f1c1;
+  --texto-escuro: #ffffff;
+
+  /* === RETRO WAVE/FLIPERAMA ESTÉTICA === */
+  --rw-bg1: #140024;
+  --rw-bg2: #1a0033;
+  --rw-bg3: #2d0066;
+  --rw-pink: #ff2fd6;
+  --rw-cyan: #00fff7;
+  --rw-purple: #a259ff;
+  --rw-yellow: #ffe156;
+  --rw-dark: #0a001a;
+  --rw-white: #fff;
+
+  /* --- Stardew Valley Inspired Navbar & Green Elements --- */
+  --stardew-green1: #d6eec5;
+  --stardew-green2: #a7d89c;
+  --stardew-blue1: #cbe7f6;
+  --stardew-blue2: #a3c9e2;
+  --stardew-brown: #bfa77a;
+  --stardew-yellow: #ffe9a3;
+  --stardew-pixel-border: #8a7b5c;
+  --stardew-pixel-bg: #f8fbe8;
+  --stardew-pixel-card: #f3f8e6;
+  --stardew-pixel-btn: #e3f3d9;
+  --stardew-pixel-btn-hover: #f7e6b3;
+}
+
+/* Reset e fonte padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'VT323', monospace !important;
+}
+
+/* Fundo geral suave */
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--sv-sky-blue2) 0%, var(--sv-sky-blue) 40%, var(--sv-grass-green2) 100%);
+  color: var(--sv-black);
+  font-family: 'VT323', monospace !important;
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background 0.6s;
+}
+
+/* 1. Fonte retrô para títulos */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* 2. Títulos com fonte retrô */
+.logo, .main-content h1, .jogo-card .nome, .pagina-jogo-detalhes h1 {
+  font-family: 'Press Start 2P', monospace !important;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  color: var(--sv-title-yellow) !important;
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+}
+
+/* --- RETRO WAVE NAVBAR --- */
+.nav-container {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, var(--sv-brown) 0%, var(--sv-brown-dark) 100%);
+  border-bottom: 3px solid var(--sv-title-orange);
+  border-radius: 0 0 16px 16px;
+  color: var(--sv-title-yellow);
+  font-family: 'VT323', monospace;
+  animation: navGlow 3.5s ease-in-out infinite;
+  box-shadow: none;
+}
+@keyframes navGlow {
+  0%, 100% { box-shadow: 0 0 24px 0 var(--sv-sky-blue2), 0 0 0 2px var(--sv-title-yellow) inset; }
+  50% { box-shadow: 0 0 48px 0 var(--sv-title-yellow), 0 0 0 4px var(--sv-sky-blue2) inset; }
+}
+.logo {
+  color: var(--sv-title-yellow) !important;
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.nav-links li a {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black) !important;
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  font-weight: bold;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  letter-spacing: 2px;
+  margin: 0 6px;
+  transition: background 0.22s, color 0.22s, border 0.22s, box-shadow 0.22s, transform 0.18s;
+  text-shadow: 1.5px 1.5px 0 var(--sv-shadow);
+}
+.nav-links li a:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black) !important;
+  border-color: var(--sv-brown-dark);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  filter: brightness(1.09);
+  transform: scale(1.06);
+}
+
+/* Agrupa login/cadastro em um dropdown retrô */
+.nav-login-group { position: relative; display: inline-block; }
+.nav-login-btn {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  font-weight: bold;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  letter-spacing: 2px;
+  margin: 0 6px;
+  transition: background 0.22s, color 0.22s, border 0.22s, box-shadow 0.22s, transform 0.18s;
+  text-shadow: 1.5px 1.5px 0 var(--sv-shadow);
+}
+.nav-login-group:hover .nav-login-btn {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+  border-color: var(--sv-brown-dark);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  filter: brightness(1.09);
+  transform: scale(1.06);
+}
+.nav-login-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: var(--sv-beige);
+  border: 2px solid var(--sv-brown-dark);
+  border-radius: 10px;
+  box-shadow: 0 0 16px var(--sv-shadow);
+}
+.nav-login-group:hover .nav-login-dropdown { display: block; }
+.nav-login-dropdown a {
+  display: block;
+  color: var(--sv-brown-dark);
+  padding: 12px 18px;
+  text-decoration: none;
+  font-family: 'Press Start 2P', monospace;
+  border-bottom: 1px solid var(--sv-title-orange);
+}
+.nav-login-dropdown a:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+}
+
+/* --- Catálogo de jogos em fileiras de 3 (grid fixo, sem auto-fit) --- */
+.home-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.8rem;
+  max-width: 1300px;
+  margin: 2.5rem auto 2rem auto;
+  padding: 0 1.5rem;
+  justify-items: stretch;
+  align-items: stretch;
+}
+@media (max-width: 1024px) {
+  .home-card { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .home-card { grid-template-columns: 1fr; }
+}
+
+/* Remove grid antigo com auto-fit para não sobrescrever */
+.home-card[style], .home-card[style*="auto-fit"] {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* --- Login e Registro grandes, modernos, legíveis, Stardew Valley --- */
+.logar, .formulario {
+  max-width: 410px;
+  margin: 60px auto 48px auto;
+  background: linear-gradient(120deg, var(--sv-beige) 80%, var(--sv-earth) 100%);
+  border-radius: 22px;
+  box-shadow: 0 8px 32px 0 rgba(191,167,122,0.13);
+  padding: 32px 24px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  font-size: 1.08rem;
+}
+.logar h1, .formulario h1 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: var(--sv-title-orange);
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+}
+.logar label, .formulario label {
+  font-size: 1.25rem;
+  color: var(--sv-brown-dark);
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  font-family: 'VT323', monospace;
+}
+.logar input, .formulario input, .formulario textarea {
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  border: 2.5px solid var(--sv-brown-dark);
+  background: var(--sv-beige);
+  color: var(--sv-black);
+  box-shadow: 0 2px 12px 0 rgba(191,167,122,0.13);
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  outline: none;
+}
+.logar input:focus, .formulario input:focus, .formulario textarea:focus {
+  border-color: var(--sv-title-orange);
+  background: var(--sv-earth);
+  color: var(--sv-black);
+}
+.logar input::placeholder, .formulario input::placeholder, .formulario textarea::placeholder {
+  color: var(--sv-brown-dark);
+  opacity: 0.8;
+  font-size: 1.15rem;
+  font-family: 'VT323', monospace;
+}
+.logar button, .formulario button {
+  padding: 14px 0;
+  font-size: 1.08rem;
+  border-radius: 12px;
+  margin-top: 10px;
+  width: 100%;
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: 3px solid var(--sv-title-orange);
+  font-family: 'Press Start 2P', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 6px 24px 0 rgba(255,179,71,0.13);
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s, border 0.2s, transform 0.18s;
+}
+.logar button:hover, .formulario button:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+  box-shadow: 0 12px 36px 0 rgba(255,179,71,0.18);
+  border-color: var(--sv-brown-dark);
+  filter: brightness(1.09);
+  transform: scale(1.04);
+}
+
+/* --- Cards de jogos: Stardew Valley, pixel art, detalhes modernos --- */
+.jogo-card {
+  background: linear-gradient(120deg, var(--sv-earth) 80%, var(--sv-brown) 100%);
+  border: 4px double var(--sv-brown-dark);
+  outline: 4px solid var(--sv-title-orange);
+  outline-offset: -8px;
+  border-radius: 28px;
+  color: var(--sv-black);
+  box-shadow: 0 12px 48px 0 rgba(191,167,122,0.22), 0 2px 0 0 var(--sv-title-orange);
+  font-family: 'VT323', monospace;
+  image-rendering: pixelated;
+  transition: box-shadow 0.25s, border-color 0.25s, background 0.25s, filter 0.25s, transform 0.18s;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  min-height: 480px;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.5rem 0.5rem;
+}
+.jogo-card:hover {
+  background: var(--sv-title-orange);
+  filter: brightness(1.09) drop-shadow(0 0 18px var(--sv-title-orange));
+  box-shadow: 0 20px 64px 0 rgba(255,179,71,0.18), 0 3px 0 0 var(--sv-title-orange);
+  border-color: var(--sv-title-orange);
+  outline-color: var(--sv-brown-dark);
+  transform: translateY(-14px) scale(1.04);
+  z-index: 2;
+}
+.jogo-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(191,167,122,0.13);
+  background: var(--sv-brown);
+  transition: filter .3s, box-shadow .3s;
+}
+.jogo-card:hover img {
+  filter: brightness(1.13) saturate(1.13);
+  box-shadow: 0 12px 32px 0 rgba(255,179,71,0.18);
+}
+.jogo-card .nome {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--sv-title-yellow);
+  letter-spacing: 2.5px;
+  text-shadow: 1.5px 1.5px 0 var(--sv-shadow);
+  margin-bottom: 0.2em;
+  font-family: 'Press Start 2P', monospace;
+}
+.jogo-card .preco {
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--sv-brown-dark);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.jogo-card .detalhes {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 14px;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  padding: 18px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  width: 98%;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s, border 0.2s, transform 0.18s;
+  cursor: pointer;
+  outline: none;
+}
+.jogo-card .detalhes:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  border-color: var(--sv-brown-dark);
+  filter: brightness(1.09);
+  transform: scale(1.03);
+}
+
+/* --- Footer bonito, grande, Stardew Valley --- */
+.footer {
+  width: 100%;
+  background: linear-gradient(90deg, var(--sv-brown-dark) 0%, var(--sv-brown) 100%);
+  color: var(--sv-title-yellow);
+  font-family: 'VT323', monospace;
+  font-size: 1.25rem;
+  padding: 3.5rem 0 2.2rem 0;
+  margin-top: 4rem;
+  border-top: 4px solid var(--sv-title-orange);
+  box-shadow: 0 -8px 32px 0 rgba(191,167,122,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+.footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.footer-logo {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.2rem;
+  color: var(--sv-title-yellow);
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer-links a {
+  color: var(--sv-title-yellow);
+  text-decoration: none;
+  font-size: 1.18rem;
+  font-family: 'VT323', monospace;
+  transition: color 0.2s, text-shadow 0.2s;
+  text-shadow: 1px 1px 0 var(--sv-shadow);
+}
+.footer-links a:hover {
+  color: var(--sv-title-orange);
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+}
+.footer-copyright {
+  margin-top: 2.5rem;
+  color: var(--sv-title-yellow);
+  font-size: 1.08rem;
+  text-align: center;
+  opacity: 0.85;
+  letter-spacing: 1.2px;
+}
+@media (max-width: 900px) {
+  .footer .footer-content { flex-direction: column; align-items: center; gap: 2rem; }
+  .footer { font-size: 1.08rem; padding: 2.2rem 0 1.2rem 0; }
+  .footer-logo { font-size: 1.5rem; }
+}
+
+/* --- Navbar: botões grandes, modernos, destacados --- */
+.nav-links li a {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black) !important;
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  font-weight: bold;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  letter-spacing: 2px;
+  margin: 0 6px;
+  transition: background 0.22s, color 0.22s, border 0.22s, box-shadow 0.22s, transform 0.18s;
+  text-shadow: 1.5px 1.5px 0 var(--sv-shadow);
+}
+.nav-links li a:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black) !important;
+  border-color: var(--sv-brown-dark);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  filter: brightness(1.09);
+  transform: scale(1.06);
+}
+
+/* Ajuste para dropdown login/registro também ficar grande */
+.nav-login-btn {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  font-weight: bold;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  letter-spacing: 2px;
+  margin: 0 6px;
+  transition: background 0.22s, color 0.22s, border 0.22s, box-shadow 0.22s, transform 0.18s;
+  text-shadow: 1.5px 1.5px 0 var(--sv-shadow);
+}
+.nav-login-group:hover .nav-login-btn {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+  border-color: var(--sv-brown-dark);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  filter: brightness(1.09);
+  transform: scale(1.06);
+}
+
+/* --- Estilos gerais para elementos com fundo verde --- */
+:root {
+  --fundo-verde-claro: #d6eec5;
+  --fundo-verde-medio: #a7d89c;
+  --fundo-verde-escuro: #1b6a91;
+  --fundo-verde-hover: #2479b5;
+  --texto-verde-escuro: #1c557b;
+  --texto-verde-claro: #ffffff;
+}
+
+/* --- Botões com estilo moderno e destacado --- */
+button {
+  background-color: var(--fundo-verde-claro);
+  color: var(--texto-verde-escuro);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+button:hover {
+  background-color: var(--fundo-verde-medio);
+  transform: translateY(-2px);
+}
+
+/* --- Inputs e Textareas com estilo moderno --- */
+input, textarea {
+  background-color: var(--fundo-verde-claro);
+  color: var(--texto-verde-escuro);
+  border: 2px solid var(--fundo-verde-medio);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+input:focus, textarea:focus {
+  border-color: var(--fundo-verde-hover);
+  background-color: var(--texto-verde-claro);
+}
+
+/* --- Links com estilo moderno e destacado --- */
+a {
+  color: var(--sv-title-yellow);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+a:hover {
+  color: var(--sv-title-orange);
+  text-shadow: 1px 1px 0 var(--sv-shadow);
+}
+
+/* --- Tabelas com estilo moderno --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+th, td {
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+  border: 2px solid var(--fundo-verde-medio);
+}
+th {
+  background: var(--fundo-verde-medio);
+  color: var(--texto-verde-escuro);
+  font-weight: bold;
+}
+td {
+  background: var(--fundo-verde-claro);
+  color: var(--texto-verde-escuro);
+}
+
+/* --- Cartões com estilo moderno e destacado --- */
+.card {
+  background: var(--fundo-verde-claro);
+  border: 2px solid var(--fundo-verde-medio);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Estilos para seções com fundo verde --- */
+.section {
+  background: var(--fundo-verde-claro);
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos para cabeçalhos de seções --- */
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--sv-title-orange);
+  text-align: center;
+  position: relative;
+}
+.section h2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, var(--sv-title-orange) 0%, var(--sv-title-yellow) 100%);
+}
+
+/* --- Estilos para rodapé --- */
+footer {
+  background: var(--sv-brown);
+  color: var(--sv-title-yellow);
+  padding: 2rem 0;
+  border-top: 4px solid var(--sv-title-orange);
+  position: relative;
+  z-index: 10;
+}
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: -1;
+}
+
+/* --- Estilos para animações de entrada --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- Estilos para elementos com animação de entrada --- */
+.animated {
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+.animated-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+/* --- Estilos para ícones --- */
+.icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  fill: var(--sv-title-yellow);
+  transition: fill 0.3s;
+}
+.icon:hover {
+  fill: var(--sv-title-orange);
+}
+
+/* --- Estilos para listas com marcadores personalizados --- */
+ul.custom-list {
+  list-style: none;
+  padding: 0;
+}
+ul.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+ul.custom-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--sv-title-orange);
+  font-size: 1.2rem;
+}
+
+/* --- Estilos para botões de ação flutuantes --- */
+.fab {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  z-index: 100;
+}
+.fab:hover {
+  background: var(--sv-title-orange);
+  transform: translateY(-2px);
+}
+
+/* --- Estilos para tooltips --- */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--sv-black);
+  color: var(--sv-title-yellow);
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position the tooltip above the text */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* --- Estilos para barras de progresso --- */
+.progress {
+  width: 100%;
+  height: 8px;
+  background: var(--sv-earth);
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+.progress .progress-bar {
+  height: 100%;
+  background: var(--sv-title-orange);
+  transition: width 0.4s;
+}
+
+/* --- Estilos para badges e etiquetas --- */
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  transition: background 0.3s, transform 0.3s;
+}
+.badge:hover {
+  background: var(--sv-title-orange);
+  transform: translateY(-2px);
+}
+
+/* --- Estilos para cabeçalhos de tabelas --- */
+.table-header {
+  background: var(--sv-brown);
+  color: var(--sv-title-yellow);
+  font-weight: bold;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--sv-title-orange);
+}
+
+/* --- Estilos para células de tabelas --- */
+.table-cell {
+  padding: 1rem;
+  border-bottom: 1px solid var(--sv-brown-dark);
+  color: var(--sv-black);
+}
+
+/* --- SOBRE, FAQ e CARRINHO: containers centralizados, destacados, harmônicos, SEM sobrescrita --- */
+.sobre-container, .faq-container, .carrinho-container {
+  max-width: 900px;
+  min-width: 320px;
+  margin: 48px auto 48px auto;
+  background: linear-gradient(120deg, var(--sv-beige) 80%, var(--sv-earth) 100%);
+  border-radius: 28px;
+  box-shadow: 0 8px 32px 0 rgba(191,167,122,0.18);
+  padding: 48px 64px 48px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  text-align: center;
+  border: 4px double var(--sv-brown-dark);
+  outline: 4px solid var(--sv-title-orange);
+  outline-offset: -8px;
+  position: relative;
+}
+.sobre-container::before, .faq-container::before, .carrinho-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  border: 3.5px dashed var(--sv-title-orange);
+  pointer-events: none;
+  z-index: 1;
+}
+.sobre-container h1, .faq-container h1, .carrinho-container h1 {
+  font-size: 2.1rem;
+  color: var(--sv-title-orange);
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+  margin-bottom: 18px;
+}
+.sobre-container p, .faq_container p, .carrinho-container p, .faq-item {
+  color: var(--sv-black);
+  font-size: 1.18rem;
+  background: var(--sv-beige);
+  border-radius: 14px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 12px 0 rgba(191,167,122,0.08);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.faq-item {
+  width: 100%;
+  margin: 0 auto 18px auto;
+}
+
+.pagina-jogo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 60px auto 60px auto;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 2vw;
+}
+.pagina-jogo-esquerda {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagina-jogo-detalhes {
+  background: linear-gradient(120deg, var(--sv-earth) 80%, var(--sv-brown) 100%);
+  border-radius: 28px;
+  border: 3.5px solid var(--sv-brown-dark);
+  box-shadow: 0 8px 32px 0 rgba(191,167,122,0.13);
+  padding: 48px 38px 38px 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  font-family: 'VT323', monospace;
+  max-width: 540px;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .pagina-jogo-container {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 2vw;
+    max-width: 99vw;
+  }
+  .pagina-jogo-detalhes {
+    padding: 24px 6vw 24px 6vw;
+    max-width: 98vw;
+  }
+}
+
+.jogo-card {
+  background: linear-gradient(120deg, var(--sv-earth) 80%, var(--sv-brown) 100%);
+  border: 4px double var(--sv-brown-dark);
+  outline: 4px solid var(--sv-title-orange);
+  outline-offset: -8px;
+  border-radius: 28px;
+  color: var(--sv-black);
+  box-shadow: 0 12px 48px 0 rgba(191,167,122,0.22), 0 2px 0 0 var(--sv-title-orange);
+  font-family: 'VT323', monospace;
+  image-rendering: pixelated;
+  transition: box-shadow 0.25s, border-color 0.25s, background 0.25s, filter 0.25s, transform 0.18s;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  min-height: 480px;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0.5rem 0.5rem;
+}
+.jogo-card:hover {
+  background: var(--sv-title-orange);
+  filter: brightness(1.09) drop-shadow(0 0 18px var(--sv-title-orange));
+  box-shadow: 0 20px 64px 0 rgba(255,179,71,0.18), 0 3px 0 0 var(--sv-title-orange);
+  border-color: var(--sv-title-orange);
+  outline-color: var(--sv-brown-dark);
+  transform: translateY(-14px) scale(1.04);
+  z-index: 2;
+}
+.jogo-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(191,167,122,0.13);
+  background: var(--sv-brown);
+  transition: filter .3s, box-shadow .3s;
+}
+.jogo-card:hover img {
+  filter: brightness(1.13) saturate(1.13);
+  box-shadow: 0 12px 32px 0 rgba(255,179,71,0.18);
+}
+.jogo-card .nome {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--sv-title-yellow);
+  letter-spacing: 2.5px;
+  text-shadow: 1.5px 1.5px 0 var(--sv-shadow);
+  margin-bottom: 0.2em;
+  font-family: 'Press Start 2P', monospace;
+}
+.jogo-card .preco {
+  font-size: 1.25rem;
+  text-align: center;
+  color: var(--sv-brown-dark);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.jogo-card .detalhes {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 14px;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  padding: 18px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  width: 98%;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s, border 0.2s, transform 0.18s;
+  cursor: pointer;
+  outline: none;
+}
+.jogo-card .detalhes:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  border-color: var(--sv-brown-dark);
+  filter: brightness(1.09);
+  transform: scale(1.03);
+}
+
+/* --- Footer bonito, grande, Stardew Valley --- */
+.footer {
+  width: 100%;
+  background: linear-gradient(90deg, var(--sv-brown-dark) 0%, var(--sv-brown) 100%);
+  color: var(--sv-title-yellow);
+  font-family: 'VT323', monospace;
+  font-size: 1.25rem;
+  padding: 3.5rem 0 2.2rem 0;
+  margin-top: 4rem;
+  border-top: 4px solid var(--sv-title-orange);
+  box-shadow: 0 -8px 32px 0 rgba(191,167,122,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+.footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.footer-logo {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.2rem;
+  color: var(--sv-title-yellow);
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.footer-links a {
+  color: var(--sv-title-yellow);
+  text-decoration: none;
+  font-size: 1.18rem;
+  font-family: 'VT323', monospace;
+  transition: color 0.2s, text-shadow 0.2s;
+  text-shadow: 1px 1px 0 var(--sv-shadow);
+}
+.footer-links a:hover {
+  color: var(--sv-title-orange);
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+}
+.footer-copyright {
+  margin-top: 2.5rem;
+  color: var(--sv-title-yellow);
+  font-size: 1.08rem;
+  text-align: center;
+  opacity: 0.85;
+  letter-spacing: 1.2px;
+}
+@media (max-width: 900px) {
+  .footer .footer-content { flex-direction: column; align-items: center; gap: 2rem; }
+  .footer { font-size: 1.08rem; padding: 2.2rem 0 1.2rem 0; }
+  .footer-logo { font-size: 1.5rem; }
+}
+
+/* --- Navbar: botões grandes, modernos, destacados --- */
+.nav-links li a {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black) !important;
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  font-weight: bold;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  letter-spacing: 2px;
+  margin: 0 6px;
+  transition: background 0.22s, color 0.22s, border 0.22s, box-shadow 0.22s, transform 0.18s;
+  text-shadow: 1.5px 1.5px 0 var(--sv-shadow);
+}
+.nav-links li a:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black) !important;
+  border-color: var(--sv-brown-dark);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  filter: brightness(1.09);
+  transform: scale(1.06);
+}
+
+/* Ajuste para dropdown login/registro também ficar grande */
+.nav-login-btn {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  font-weight: bold;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  letter-spacing: 2px;
+  margin: 0 6px;
+  transition: background 0.22s, color 0.22s, border 0.22s, box-shadow 0.22s, transform 0.18s;
+  text-shadow: 1.5px 1.5px 0 var(--sv-shadow);
+}
+.nav-login-group:hover .nav-login-btn {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+  border-color: var(--sv-brown-dark);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  filter: brightness(1.09);
+  transform: scale(1.06);
+}
+
+/* --- Corrige imagem do jogo na página de detalhes --- */
+.jogo-imagem {
+  max-width: 340px;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(191,167,122,0.18);
+  margin-bottom: 18px;
+  background: var(--sv-beige);
+  border: 3px solid var(--sv-title-orange);
+  image-rendering: pixelated;
+  display: block;
+}
+
+/* --- Comentários Stardew Valley --- */
+.comentarios-stardew {
+  background: linear-gradient(120deg, var(--stardew-pixel-bg) 80%, var(--stardew-pixel-card) 100%);
+  border: 4px double var(--stardew-pixel-border);
+  outline: 4px solid var(--sv-title-orange);
+  outline-offset: -8px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(191,167,122,0.18);
+  padding: 36px 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin: 0 auto 32px auto;
+  max-width: 520px;
+  font-family: 'Press Start 2P', 'VT323', monospace;
+  position: relative;
+}
+.comentarios-stardew h2 {
+  color: var(--sv-title-orange);
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+  font-family: 'Press Start 2P', monospace;
+  animation: stardewTitleGlow 2.5s infinite alternate;
+}
+@keyframes stardewTitleGlow {
+  0% { text-shadow: 2px 2px 0 var(--sv-shadow), 0 0 8px var(--sv-title-yellow); }
+  100% { text-shadow: 2px 2px 0 var(--sv-shadow), 0 0 18px var(--sv-title-orange); }
+}
+.comentarios-stardew form,
+.comentarios-stardew .comentarios-prontos {
+  width: 100%;
+  background: var(--stardew-pixel-card);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 rgba(191,167,122,0.08);
+  padding: 18px 18px 12px 18px;
+  margin-bottom: 12px;
+  border: 2.5px solid var(--stardew-pixel-border);
+}
+.comentarios-stardew .comentario {
+  background: var(--stardew-pixel-btn);
+  border: 2px solid var(--stardew-pixel-border);
+  border-radius: 12px;
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  font-size: 1.1rem;
+  color: var(--sv-black);
+  box-shadow: 0 2px 8px 0 rgba(191,167,122,0.08);
+  font-family: 'VT323', monospace;
+}
+.comentarios-stardew .comentario .avaliacao {
+  color: var(--sv-title-orange);
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+.comentarios-stardew input,
+.comentarios-stardew textarea {
+  background: var(--stardew-pixel-bg);
+  border: 2px solid var(--stardew-pixel-border);
+  border-radius: 8px;
+  padding: 10px;
+  font-family: 'VT323', monospace;
+  font-size: 1rem;
+  color: var(--sv-black);
+  margin-bottom: 10px;
+}
+.comentarios-stardew button.btn {
+  background: var(--stardew-pixel-btn);
+  color: var(--sv-black);
+  border: 2px solid var(--stardew-pixel-border);
+  border-radius: 8px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  padding: 10px 24px;
+  margin-top: 8px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.comentarios-stardew button.btn:hover {
+  background: var(--stardew-pixel-btn-hover);
+  color: var(--sv-black);
+  border-color: var(--sv-title-orange);
+}
+.comentarios-stardew .estrelas label {
+  color: var(--sv-title-orange);
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-right: 2px;
+  transition: color 0.2s;
+}
+.comentarios-stardew .estrelas input[type="radio"] {
+  display: none;
+}
+.comentarios-stardew .estrelas input[type="radio"]:checked + label {
+  color: var(--sv-title-orange);
+  text-shadow: 1px 1px 0 var(--sv-shadow);
+}
+.comentarios-stardew .estrelas label:hover,
+.comentarios-stardew .estrelas label:focus {
+  color: var(--sv-title-yellow);
+}
+
+/* --- Catálogo de Jogos: título animado e destacado --- */
+.catalogo-titulo {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.2rem;
+  color: var(--sv-title-orange);
+  text-shadow: 2px 2px 0 var(--sv-shadow), 0 0 12px var(--sv-title-yellow);
+  margin: 32px auto 28px auto;
+  text-align: center;
+  letter-spacing: 2px;
+  animation: catalogoGlow 2.5s infinite alternate;
+  background: linear-gradient(90deg, var(--sv-title-yellow) 0%, var(--sv-title-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+@keyframes catalogoGlow {
+  0% { text-shadow: 2px 2px 0 var(--sv-shadow), 0 0 8px var(--sv-title-yellow); }
+  100% { text-shadow: 2px 2px 0 var(--sv-shadow), 0 0 18px var(--sv-title-orange); }
+}
+
+/* --- DASHBOARD & SUBMISSÕES: Painéis modernos Stardew Valley --- */
+.dashboard-container, .submissao-container {
+  max-width: 800px;
+  margin: 48px auto 48px auto;
+  background: linear-gradient(120deg, var(--sv-beige) 80%, var(--sv-earth) 100%);
+  border-radius: 28px;
+  box-shadow: 0 8px 32px 0 rgba(191,167,122,0.18);
+  padding: 48px 48px 38px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  border: 4px double var(--sv-brown-dark);
+  outline: 4px solid var(--sv-title-orange);
+  outline-offset: -8px;
+  position: relative;
+}
+.dashboard-container h2, .submissao-container h2 {
+  font-size: 2rem;
+  color: var(--sv-title-orange);
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  animation: stardewTitleGlow 2.5s infinite alternate;
+}
+.dashboard-container ul, .submissao-container ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+.dashboard-container li, .submissao-container li {
+  background: var(--stardew-pixel-card);
+  border-radius: 14px;
+  padding: 18px 22px;
+  box-shadow: 0 2px 12px 0 rgba(191,167,122,0.08);
+  color: var(--sv-black);
+  font-size: 1.18rem;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: 'VT323', monospace;
+}
+.dashboard-container a.btn, .submissao-container a.btn, .dashboard-container button, .submissao-container button {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 14px;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  padding: 18px 32px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  width: 98%;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s, border 0.2s, transform 0.18s;
+  cursor: pointer;
+  outline: none;
+}
+.dashboard-container a.btn:hover, .submissao-container a.btn:hover, .dashboard-container button:hover, .submissao-container button:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  border-color: var(--sv-brown-dark);
+  filter: brightness(1.09);
+  transform: scale(1.03);
+}
+.dashboard-container form, .submissao-container form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.dashboard-container label, .submissao-container label {
+  font-size: 1.18rem;
+  color: var(--sv-brown-dark);
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  font-family: 'VT323', monospace;
+}
+.dashboard-container input, .dashboard-container textarea, .dashboard-container select,
+.submissao-container input, .submissao-container textarea, .submissao-container select {
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  border: 2.5px solid var(--sv-brown-dark);
+  background: var(--sv-beige);
+  color: var(--sv-black);
+  box-shadow: 0 2px 12px 0 rgba(191,167,122,0.13);
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  outline: none;
+}
+.dashboard-container input:focus, .dashboard-container textarea:focus, .dashboard-container select:focus,
+.submissao-container input:focus, .submissao-container textarea:focus, .submissao-container select:focus {
+  border-color: var(--sv-title-orange);
+  background: var(--sv-earth);
+  color: var(--sv-black);
+}
+
+/* --- Formulário de edição de jogos (admin) --- */
+.editar-jogo-form {
+  max-width: 600px;
+  margin: 36px auto 36px auto;
+  background: linear-gradient(120deg, var(--sv-beige) 80%, var(--sv-earth) 100%);
+  border-radius: 28px;
+  box-shadow: 0 8px 32px 0 rgba(191,167,122,0.18);
+  padding: 48px 48px 38px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  border: 4px double var(--sv-brown-dark);
+  outline: 4px solid var(--sv-title-orange);
+  outline-offset: -8px;
+  position: relative;
+}
+.editar-jogo-form h2 {
+  font-size: 2rem;
+  color: var(--sv-title-orange);
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 2px 2px 0 var(--sv-shadow);
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  animation: stardewTitleGlow 2.5s infinite alternate;
+}
+.editar-jogo-form label {
+  font-size: 1.18rem;
+  color: var(--sv-brown-dark);
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  font-family: 'VT323', monospace;
+}
+.editar-jogo-form input, .editar-jogo-form textarea, .editar-jogo-form select {
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  border: 2.5px solid var(--sv-brown-dark);
+  background: var(--sv-beige);
+  color: var(--sv-black);
+  box-shadow: 0 2px 12px 0 rgba(191,167,122,0.13);
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  outline: none;
+  width: 100%;
+}
+.editar-jogo-form input:focus, .editar-jogo-form textarea:focus, .editar-jogo-form select:focus {
+  border-color: var(--sv-title-orange);
+  background: var(--sv-earth);
+  color: var(--sv-black);
+}
+.editar-jogo-form button {
+  background: var(--sv-title-yellow);
+  color: var(--sv-black);
+  border: 3px solid var(--sv-title-orange);
+  border-radius: 14px;
+  box-shadow: 0 4px 18px 0 rgba(255,179,71,0.13);
+  padding: 18px 32px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.18rem;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  width: 98%;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s, border 0.2s, transform 0.18s;
+  cursor: pointer;
+  outline: none;
+}
+.editar-jogo-form button:hover {
+  background: var(--sv-title-orange);
+  color: var(--sv-black);
+  box-shadow: 0 8px 28px 0 rgba(255,179,71,0.18);
+  border-color: var(--sv-brown-dark);
+  filter: brightness(1.09);
+  transform: scale(1.03);
+}
