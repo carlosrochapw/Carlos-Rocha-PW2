@@ -114,7 +114,7 @@
         alert('Selecione uma forma de pagamento antes de comprar.');
         return;
       }
-      // Toast estilizado IndieHub
+
       const toast = document.createElement('div');
       toast.innerText = 'Obrigado pela compra! Volte sempre.';
       toast.style.position = 'fixed';
